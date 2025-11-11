@@ -1,0 +1,17 @@
+# requirements.txt
+# --- Streamlit Frontend Dependencies (module1.py) ---
+streamlit>=1.30.0
+requests
+pandas
+plotly>=5.15.0
+numpy
+scikit-learn  # Used for KMeans/make_blobs, even if currently commented out in the final code
+pyjwt>=2.8.0  # Used for decoding and verifying the JWT token
+
+# --- Flask Backend Dependencies (api.py) ---
+Flask>=2.3.3
+PyJWT>=2.8.0  # Note: Required here for token generation and authentication
+gunicorn      # Recommended for production deployment of Flask app
+SQLAlchemy    # Recommended ORM for database integration (optional, if using a complex DB)
+# sqlite3 is built-in, but use a proper library like SQLAlchemy for management
+# If using PostgreSQL, you would add 'psycopg2-binary' here.
